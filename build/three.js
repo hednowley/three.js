@@ -993,14 +993,9 @@
 
 	function Matrix4() {
 
-		this.elements = [
-
-			1, 0, 0, 0,
-			0, 1, 0, 0,
-			0, 0, 1, 0,
-			0, 0, 0, 1
-
-		];
+		Object.defineProperty(this, "elements", {
+			value: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		})
 
 		if ( arguments.length > 0 ) {
 
